@@ -1,0 +1,399 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+#main {
+    width: 1400px;
+    height: 1100px;
+    margin: 150px auto;
+    // background-color: bisque;
+    position: relative;
+    font-family: 'DungGeunMo';
+}
+#yesorno{
+    width: 1400px;
+    height: 1100px;
+    z-index: 30;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    display: none;
+    justify-content: space-around;
+        align-items: center;
+    &.view{
+        display: flex;
+    }
+    &>div{
+        cursor: pointer;
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+        width: 20%;
+        height: 100px;
+        background-color: rgba(225, 59, 59, 0.744);
+        transition: all 0.5s;
+        overflow: hidden;
+        &:hover{
+            transform:scale(120%);
+        }
+    }
+}
+
+#itembox {
+    width: 1200px;
+    height: 900px;
+    // background-color: aqua;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(./images/talkingbox.png);
+    background-size: 100% 100%;
+
+    background-repeat: no-repeat;
+
+    // #checking{
+    //     position: absolute;
+    //     width: 1070px;
+    //     height: 580px;
+    //     top:70px;
+    //     left:69px;
+    //     background-color: rgba(120,0,0,0.5)
+    // }
+    #pageBox {
+        position: absolute;
+        width: 1070px;
+        height: 580px;
+        top: 70px;
+        left: 69px;
+        // background-color: rgba(120,0,0,0.5);
+        display: none;
+
+        &.view {
+            display: block;
+        }
+
+        &>div {
+            display: none;
+
+            &.view {
+                display: block;
+            }
+        }
+
+    }
+
+    #indexpageBox {
+        position: absolute;
+        width: 1070px;
+        height: 580px;
+        top: 70px;
+        left: 69px;
+        // background-color: rgba(120, 0, 0, 0.5);
+        display: none;
+
+        &.view {
+            display: block;
+        }
+
+        &>div {
+            position: absolute;
+            width: 1070px;
+            height: 580px;
+            top: 0px;
+            left: 0px;
+            // background-color: rgba(120, 120, 0, 0.5);
+            display: none;
+
+            &.view {
+                display: block;
+            }
+
+            &>.imindex {
+                &>p {
+                    display: none;
+                }
+            }
+        }
+        &>div{
+            
+            &>span{
+                padding-left:20px;
+                padding: 15px 0 ;
+                display: block;
+                
+            }
+        }
+    }
+
+    #indexListBox {
+        position: absolute;
+        width: 1070px;
+        bottom: 250px;
+        left: 69px;
+        // background-color: rgba(120, 0, 0, 0.5);
+        text-align: center;
+        display: none;
+
+        &.view {
+            display: block;
+        }
+
+        &>span {
+            font-size: 20px;
+            padding: 0px 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(255, 228, 196, 0.5);
+                border-radius: 50%;
+            }
+
+            &.point {
+                background-color: rgba(255, 228, 196, 1);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &>div.selectboxes {
+        position: absolute;
+        width: 1070px;
+        height: 580px;
+        top: 70px;
+        left: 69px;
+        background-color: rgba(120, 200, 0, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        display: none;
+
+        &.view {
+            display: flex;
+        }
+    }
+
+    #EditBoxAdd {
+
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        display: none;
+
+        &.view {
+            display: flex;
+        }
+
+        label {
+            flex: 1;
+
+
+
+
+            font-size: 32px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+
+            &>input {
+                font-size: 16px;
+                border: solid rgba(0, 0, 0, 0.5) 0.5px;
+                border-radius: 5px;
+                width: 400px;
+                height: 3em;
+            }
+
+        }
+
+        &>button {
+            padding: 0px 15px;
+            height: 80px;
+            margin-right: 70px;
+            cursor: pointer;
+
+        }
+
+    }
+    #EditBoxDelete {
+
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        display: none;
+        
+        &.view {
+            display: flex;
+        }
+
+        
+
+        &>button {
+            padding: 0px 15px;
+            height: 80px;
+            margin-right: 70px;
+            cursor: pointer;
+
+        }
+        &>#delspan{
+            display: none;
+        }
+        select{
+            font-size: 18px;
+            height: 80px;
+            word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+        }
+        option{
+            font-size: 15px;
+            word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            
+        }
+    }
+    #EditBoxEdit {
+
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        display: none;
+
+        &.view {
+            display: flex;
+        }
+
+        label {
+            flex: 1;
+
+
+
+
+            font-size: 32px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+
+            &>input {
+                font-size: 16px;
+                border: solid rgba(0, 0, 0, 0.5) 0.5px;
+                border-radius: 5px;
+                width: 400px;
+                height: 3em;
+            }
+
+        }
+
+        &>button {
+            padding: 0px 15px;
+            height: 80px;
+            margin-right: 70px;
+            cursor: pointer;
+
+        }
+
+    }
+
+}
+
+#charbox {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    // background-color: blue;
+    background-image: url(./images/hmm.png);
+    background-size: 100% 100%;
+
+    background-repeat: no-repeat;
+
+    &>div {
+        position: absolute;
+        top: 50px;
+        left: -170px;
+        background-image: url(./images/thinking.png);
+        padding: 40px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: none;
+    }
+
+    &:hover {
+        background-image: url(./images/hnn.png);
+        background-size: 100% 100%;
+
+        background-repeat: no-repeat;
+    }
+
+    &:hover div {
+        display: block;
+    }
+
+    &.coffee {
+        background-image: url(./images/hmmCoffee.png);
+        background-size: 100% 100%;
+
+        background-repeat: no-repeat;
+    }
+
+    &.sung {
+        background-image: url(./images/hmmSung.png);
+        background-size: 100% 100%;
+
+        background-repeat: no-repeat;
+    }
+}
+
+#selectbox {
+    width: 1200px;
+    height: 200px;
+    position: absolute;
+    top: 850px;
+    left: 0px;
+    // background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 200px;
+
+    &>div {
+        width: 15%;
+        height: 70%;
+        // background-color: blue;
+        margin-right: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+
+        &>span {
+            font-size: 30px;
+            cursor: pointer;
+
+
+        }
+    }
+    &>div:nth-child(3){
+        display: none;
+        &.view{
+            display: flex;
+        }
+    }
+}

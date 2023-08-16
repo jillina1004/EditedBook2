@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css");
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+#main {
+  width: 1400px;
+  height: 1100px;
+  margin: 150px auto;
+  position: relative;
+  font-family: "DungGeunMo";
+}
+
+#yesorno {
+  width: 1400px;
+  height: 1100px;
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+}
+#yesorno.view {
+  display: flex;
+}
+#yesorno > div {
+  cursor: pointer;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+  width: 20%;
+  height: 100px;
+  background-color: rgba(225, 59, 59, 0.744);
+  transition: all 0.5s;
+  overflow: hidden;
+}
+#yesorno > div:hover {
+  transform: scale(120%);
+}
+
+#itembox {
+  width: 1200px;
+  height: 900px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url(./images/talkingbox.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#itembox #pageBox {
+  position: absolute;
+  width: 1070px;
+  height: 580px;
+  top: 70px;
+  left: 69px;
+  display: none;
+}
+#itembox #pageBox.view {
+  display: block;
+}
+#itembox #pageBox > div {
+  display: none;
+}
+#itembox #pageBox > div.view {
+  display: block;
+}
+#itembox #indexpageBox {
+  position: absolute;
+  width: 1070px;
+  height: 580px;
+  top: 70px;
+  left: 69px;
+  display: none;
+}
+#itembox #indexpageBox.view {
+  display: block;
+}
+#itembox #indexpageBox > div {
+  position: absolute;
+  width: 1070px;
+  height: 580px;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+#itembox #indexpageBox > div.view {
+  display: block;
+}
+#itembox #indexpageBox > div > .imindex > p {
+  display: none;
+}
+#itembox #indexpageBox > div > span {
+  padding-left: 20px;
+  padding: 15px 0;
+  display: block;
+}
+#itembox #indexListBox {
+  position: absolute;
+  width: 1070px;
+  bottom: 250px;
+  left: 69px;
+  text-align: center;
+  display: none;
+}
+#itembox #indexListBox.view {
+  display: block;
+}
+#itembox #indexListBox > span {
+  font-size: 20px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+#itembox #indexListBox > span:hover {
+  background-color: rgba(255, 228, 196, 0.5);
+  border-radius: 50%;
+}
+#itembox #indexListBox > span.point {
+  background-color: rgb(255, 228, 196);
+  border-radius: 50%;
+}
+#itembox > div.selectboxes {
+  position: absolute;
+  width: 1070px;
+  height: 580px;
+  top: 70px;
+  left: 69px;
+  background-color: rgba(120, 200, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  display: none;
+}
+#itembox > div.selectboxes.view {
+  display: flex;
+}
+#itembox #EditBoxAdd {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+}
+#itembox #EditBoxAdd.view {
+  display: flex;
+}
+#itembox #EditBoxAdd label {
+  flex: 1;
+  font-size: 32px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#itembox #EditBoxAdd label > input {
+  font-size: 16px;
+  border: solid rgba(0, 0, 0, 0.5) 0.5px;
+  border-radius: 5px;
+  width: 400px;
+  height: 3em;
+}
+#itembox #EditBoxAdd > button {
+  padding: 0px 15px;
+  height: 80px;
+  margin-right: 70px;
+  cursor: pointer;
+}
+#itembox #EditBoxDelete {
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+}
+#itembox #EditBoxDelete.view {
+  display: flex;
+}
+#itembox #EditBoxDelete > button {
+  padding: 0px 15px;
+  height: 80px;
+  margin-right: 70px;
+  cursor: pointer;
+}
+#itembox #EditBoxDelete > #delspan {
+  display: none;
+}
+#itembox #EditBoxDelete select {
+  font-size: 18px;
+  height: 80px;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#itembox #EditBoxDelete option {
+  font-size: 15px;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#itembox #EditBoxEdit {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+}
+#itembox #EditBoxEdit.view {
+  display: flex;
+}
+#itembox #EditBoxEdit label {
+  flex: 1;
+  font-size: 32px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#itembox #EditBoxEdit label > input {
+  font-size: 16px;
+  border: solid rgba(0, 0, 0, 0.5) 0.5px;
+  border-radius: 5px;
+  width: 400px;
+  height: 3em;
+}
+#itembox #EditBoxEdit > button {
+  padding: 0px 15px;
+  height: 80px;
+  margin-right: 70px;
+  cursor: pointer;
+}
+
+#charbox {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-image: url(./images/hmm.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#charbox > div {
+  position: absolute;
+  top: 50px;
+  left: -170px;
+  background-image: url(./images/thinking.png);
+  padding: 40px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: none;
+}
+#charbox:hover {
+  background-image: url(./images/hnn.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#charbox:hover div {
+  display: block;
+}
+#charbox.coffee {
+  background-image: url(./images/hmmCoffee.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#charbox.sung {
+  background-image: url(./images/hmmSung.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#selectbox {
+  width: 1200px;
+  height: 200px;
+  position: absolute;
+  top: 850px;
+  left: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 200px;
+}
+#selectbox > div {
+  width: 15%;
+  height: 70%;
+  margin-right: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+#selectbox > div > span {
+  font-size: 30px;
+  cursor: pointer;
+}
+#selectbox > div:nth-child(3) {
+  display: none;
+}
+#selectbox > div:nth-child(3).view {
+  display: flex;
+}/*# sourceMappingURL=index.css.map */

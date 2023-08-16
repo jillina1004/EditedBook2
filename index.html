@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body>
+    <div id="main" >
+        <div id="yesorno">
+            <div id="yesman">삭제합니다</div>
+            <div id="noman">취소합니다</div>
+        </div>
+        <div id="itembox">
+            
+            <div id="checking">
+
+            </div>
+            <div id="pageBox">
+
+            </div>
+            <div id="indexpageBox">
+
+            </div>
+            <div id="indexListBox">
+
+            </div>
+            <div class="selectboxes">
+                <form action="#" id="EditBoxAdd"> <!-- add -->
+                    <label for="bname"><p>제목</p>
+                    <input type="text" id="bname" name="bname" value=""></label>
+                    <label for="bauthor"><p>저자</p>
+                    <input type="text" id="bauthor" name="bauthor" value=""></label>
+                    <label for="bpublisher"><p>출판</p>
+                    <input type="text" id="bpublisher" name="bpublisher" value=""></label>
+                    <label for="bdate"><p>날짜</p>
+                    <input type="date" id="bdate" name="bdate"></label>
+                    <label for="bprice"><p>가격</p>
+                    <input type="text" id="bprice" name="bprice" value="0"></label>
+                    <label for="bphoto"><p>사진</p>
+                    <input type="text" id="bphoto" name="photo" value=""></label>
+                    <label for="bsummary"><p>요약</p>
+                    <input type="text" id="bsummary" name="bsummary" value=""></label>
+                    <button type="button" id="EditBoxAddButton" >Submit</button>
+                </form>
+                <div action="#" id="EditBoxDelete">
+                    <select id="EditBoxDelete2">
+                        <option disabled selected value> 삭제할 페이지를 선택해주세요 </option>
+                    </select>
+                    <button type="button" id="EditBoxDeleteButton" >Submit</button>
+                </div>
+                <form action="#" id="EditBoxEdit">
+                    <label for="ename"><p>제목</p>
+                        <input type="text" id="ename" name="ename" value=""></label>
+                        <label for="eauthor"><p>저자</p>
+                        <input type="text" id="eauthor" name="eauthor" value=""></label>
+                        <label for="epublisher"><p>출판</p>
+                        <input type="text" id="epublisher" name="epublisher" value=""></label>
+                        <label for="edate"><p>날짜</p>
+                        <input type="date" id="edate" name="edate"></label>
+                        <label for="eprice"><p>가격</p>
+                        <input type="text" id="eprice" name="eprice" value="0"></label>
+                        <label for="ephoto"><p>사진</p>
+                        <input type="text" id="ephoto" name="ehoto" value=""></label>
+                        <label for="esummary"><p>요약</p>
+                        <input type="text" id="esummary" name="esummary" value=""></label>
+                    <button type="button" id="EditBoxEditButton" >Submit</button>
+                </form>
+            </div>
+            <!-- <div id="selectboxDelete" class="selectboxes"></div>
+            <div id="selectboxEdit" class="selectboxes"></div> -->
+        </div>
+        <div id="selectbox">
+            <div><span>추가</span></div>
+            <div><span>삭제</span></div>
+            <div><span>수정</span></div>
+        </div>
+        <div id="charbox">
+            <div>
+                <p>Wanna Go home?</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>
